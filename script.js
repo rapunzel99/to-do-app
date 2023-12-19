@@ -64,3 +64,39 @@ function deleteTask(index) {
 
 // Initial rendering of tasks
 renderTasks();
+
+// Function to change background color and set cookie
+function changeColor(color) {
+    document.body.style.backgroundColor = color;
+    setCookie('selectedColor', color, 365); // Set cookie with a one-year expiration
+}
+
+// Function to retrieve the stored color from cookie on page load
+function retrieveStoredColor() {
+    const storedColor = getCookie('selectedColor');
+    if (storedColor) {
+        document.body.style.backgroundColor = storedColor;
+    }
+}
+
+// Call retrieveStoredColor on page load
+retrieveStoredColor();
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+}
+
+// Function to get a cookie value by name
+function getCookie(name) {
+    const cookieArr = document.cookie.split(';');
+    for (let i = 0; i < cookieArr.length; i++) {
+        const cookiePair = cookieArr[i].split('=');
+        if (cookiePair[0].trim() === name) {
+            return cookiePair[1];
+        }
+    }
+    return null;
+}

@@ -61,3 +61,24 @@ input[type="checkbox"] {
 span {
     flex: 1;
 }
+.color-buttons {
+    margin-top: 10px;
+}
+
+.color-buttons button {
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.color-buttons button:nth-child(1) {
+    background-color: red;
+    color: #fff;
+}
+
+.color-buttons button:nth-child(2) {
+    background-color: green;
+    color: #fff;
+}
