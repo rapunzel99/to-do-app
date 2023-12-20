@@ -9,21 +9,27 @@
     <title>To-Do List</title>
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
-        <div class="add-task">
-            <input type="text" id="newTask" placeholder="Add a new task">
-            <button onclick="addTask()">Add</button>
+    <div class="main-body">
+        <div class="container">
+            <h1>To-Do List</h1>
+            <div class="add-task">
+                <input type="text" id="newTask" placeholder="Add a new task">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <div id="taskList">
+                <!-- Tasks will be dynamically added here -->
+            </div>
         </div>
-        <div id="taskList">
-            <!-- Tasks will be dynamically added here -->
+        <div class="color-buttons">
+            <button onclick="changeColor('red')">Red</button>
+            <button onclick="changeColor('green')">Green</button>
         </div>
+        <div id="video-container" class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uO__4Lf-KuI?si=8yR1297P2Reg0d__" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            <iframe src="https://player.vimeo.com/video/871750630?h=2e07c82474&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <script src="script.js"></script>
     </div>
-    <div class="color-buttons">
-        <button onclick="changeColor('red')">Red</button>
-        <button onclick="changeColor('green')">Green</button>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
