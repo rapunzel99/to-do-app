@@ -3,6 +3,8 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -99,4 +101,13 @@ span {
 .video-container iframe {
     width: 88%; /* Adjust the width based on your preference */
     height: 215px; /* Set the height as needed */
+}
+#footer {
+    margin-top: auto;
+    padding: 5px;
+    text-align: center;
+    background-color: #f0f0f0;
+    position: relative;
+    bottom:0;
+    width:100%
 }
